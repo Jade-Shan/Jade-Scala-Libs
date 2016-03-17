@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>net.jade-dungeon</groupId>
+		<artifactId>jadelibs-java</artifactId>
+		<version>1.0.4</version>
+	</parent>
+
+
+	<artifactId>jadelibs-scala</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>scala lib base</name>
+	<url>https://github.com/Jade-Shan/jadelibs-scala</url>
+
+	<properties>
+		<scala.version.floor>2.11</scala.version.floor>
+		<scala.version>[2.11.0,2.11.7]</scala.version>
+		<scalatest.version>[2.2.0,2.2.5]</scalatest.version>
+		<scala-maven-plugin.version>3.1.6</scala-maven-plugin.version>
+		<json4s.version>3.2.11</json4s.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.json4s</groupId>
+				<artifactId>json4s-jackson_${scala.version.floor}</artifactId>
+				<version>${json4s.version}</version>
+			</dependency>
+			<!-- scala lang -->
+			<dependency>
+				<groupId>org.scala-lang</groupId>
+				<artifactId>scala-library</artifactId>
+				<version>${scala.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.scala-lang</groupId>
+				<artifactId>scala-compiler</artifactId>
+				<version>${scala.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.scala-lang</groupId>
+				<artifactId>scala-reflect</artifactId>
+				<version>${scala.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.scala-lang</groupId>
+				<artifactId>scala-actors</artifactId>
+				<version>${scala.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.scalatest</groupId>
+				<artifactId>scalatest_${scala.version.floor}</artifactId>
+				<version>${scalatest.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies> 
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-compiler</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-reflect</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-actors</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>net.alchim31.maven</groupId>
+					<artifactId>scala-maven-plugin</artifactId>
+					<version>${scala-maven-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<!-- =========================== -->
+			<!--   compile scala             -->
+			<!--    run scala application    -->
+			<!-- =========================== -->
+			<plugin>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<configuration>
+					<scalaVersion>${scala.version}</scalaVersion>
+					<scalaCompatVersion>${scala.version.floor}</scalaCompatVersion>
+					<jvmArgs>
+						<jvmArg>-client</jvmArg>
+						<jvmArg>-Xms64m</jvmArg>
+						<jvmArg>-Xmx1024m</jvmArg>
+					</jvmArgs>
+					<args>
+						<!-- <arg>-unchecked</arg> -->
+						<!-- <arg>-explaintypes</arg> -->
+						<arg>-feature</arg>
+						<arg>-deprecation</arg>
+					</args>
+					<launchers>
+						<launcher>
+							<id>foo</id>
+							<mainClass>example.ScalaAppExample</mainClass>
+							<args>
+								<arg>Hello</arg>
+								<arg>World</arg>
+							</args>
+						</launcher>
+					</launchers>
+				</configuration>
+				<executions>
+					<execution><!-- do "scala:compile" when "compile" -->
+						<id>compile-scala</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution><!-- do "scala:testCompile" when "test-compile" -->
+						<id>compile-scala-test</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>
