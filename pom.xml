@@ -6,12 +6,12 @@
 	<parent>
 		<groupId>net.jade-dungeon</groupId>
 		<artifactId>jadelibs-java</artifactId>
-		<version>1.0.4</version>
+		<version>1.0.5</version>
 	</parent>
 
 
 	<artifactId>jadelibs-scala</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
 	<name>scala lib base</name>
 	<url>https://github.com/Jade-Shan/jadelibs-scala</url>
