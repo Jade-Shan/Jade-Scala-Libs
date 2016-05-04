@@ -20,7 +20,7 @@
 		<scala.version.floor>2.11</scala.version.floor>
 		<scala.version>[2.11.0,2.11.7]</scala.version>
 		<scalatest.version>[2.2.0,2.2.5]</scalatest.version>
-		<scala-maven-plugin.version>3.1.6</scala-maven-plugin.version>
+		<scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
 		<json4s.version>3.2.11</json4s.version>
 	</properties>
 
