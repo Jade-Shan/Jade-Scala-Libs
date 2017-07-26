@@ -17,7 +17,7 @@
 	<url>https://github.com/Jade-Shan/jadelibs-scala</url>
 
 	<properties>
-		<scala.version.floor>2.11</scala.version.floor>
+		<scala-floor.version>2.11</scala-floor.version>
 		<scala.version>[2.11.0,2.11.7]</scala.version>
 		<scalatest.version>[2.2.0,2.2.5]</scalatest.version>
 		<scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
@@ -29,7 +29,7 @@
 		<dependencies>
 			<dependency>
 				<groupId>org.json4s</groupId>
-				<artifactId>json4s-jackson_${scala.version.floor}</artifactId>
+				<artifactId>json4s-jackson_${scala-floor.version}</artifactId>
 				<version>${json4s.version}</version>
 			</dependency>
 			<!-- scala lang -->
@@ -55,7 +55,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.scalatest</groupId>
-				<artifactId>scalatest_${scala.version.floor}</artifactId>
+				<artifactId>scalatest_${scala-floor.version}</artifactId>
 				<version>${scalatest.version}</version>
 				<scope>test</scope>
 			</dependency>
@@ -119,7 +119,7 @@
 				<artifactId>scala-maven-plugin</artifactId>
 				<configuration>
 					<scalaVersion>${scala.version}</scalaVersion>
-					<scalaCompatVersion>${scala.version.floor}</scalaCompatVersion>
+					<scalaCompatVersion>${scala-floor.version}</scalaCompatVersion>
 					<jvmArgs>
 						<jvmArg>-client</jvmArg>
 						<jvmArg>-Xms64m</jvmArg>
