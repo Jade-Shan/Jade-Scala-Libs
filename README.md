@@ -1,7 +1,7 @@
 Jade-Scala-libs
 =================
 
-Update logs
+TODO List
 -----------------
 
 ### 1.0.3-SNAPSHOT
