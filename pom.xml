@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>net.jade-dungeon</groupId>
 		<artifactId>jadelibs-java</artifactId>
-		<version>1.0.9</version>
+		<version>1.0.10</version>
 	</parent>
 
 
@@ -21,6 +21,7 @@
 		<scala.version>[2.11.0,2.11.7]</scala.version>
 		<scalatest.version>[2.2.0,2.2.5]</scalatest.version>
 		<scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
+		<akka.version>2.3.16</akka.version>
 		<json4s.version>3.2.11</json4s.version>
 	</properties>
 
@@ -56,6 +57,23 @@
 				<groupId>org.scalatest</groupId>
 				<artifactId>scalatest_${scala.version.floor}</artifactId>
 				<version>${scalatest.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- akka framework -->
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-actor_${scala-floor.version}</artifactId>
+				<version>${akka.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-remote_${scala-floor.version}</artifactId>
+				<version>${akka.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.typesafe.akka</groupId>
+				<artifactId>akka-testkit_${scala-floor.version}</artifactId>
+				<version>${akka.version}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
