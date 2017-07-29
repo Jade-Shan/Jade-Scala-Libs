@@ -6,7 +6,7 @@ TODO List
 
 ### 2.0.0-SNAPSHOT
 
-* :arrow_up: upgrading dependencies on jadelibs-java to 1.0.10
+* :arrow_up: upgrading dependencies on jadelibs-java to 1.0.11-SNAPSHOT
 * :arrow_up: upgrading dependencies on scala to 2.12.3
 * :heavy_minus_sign:   remove  scala-actor
 * :arrow_up: upgrading dependencies on scalatest to 3.0.3
