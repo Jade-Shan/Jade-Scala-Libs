@@ -1,6 +1,9 @@
 Jade-Scala-libs
 =================
 
+Base config for all by Scala project.
+Defing all scala jar dependencies and version.
+
 TODO List
 -----------------
 
