@@ -7,6 +7,9 @@ Defing all scala jar dependencies and version.
 TODO List
 -----------------
 
+### 2.0.2
+
+
 ### 2.0.1
 
 * :arrow_up: upgrading dependencies on jadelibs-java to 1.0.12
