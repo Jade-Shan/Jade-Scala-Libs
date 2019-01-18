@@ -11,6 +11,8 @@ TODO List
 
 * :arrow_up: upgrading dependencies on jadelibs-java to 1.0.13
 
+* :heavy_plus_sign: enumeratum for type safe enum
+
 ### 2.0.1
 
 * :arrow_up: upgrading dependencies on jadelibs-java to 1.0.12
