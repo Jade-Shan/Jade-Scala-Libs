@@ -23,6 +23,7 @@
 		<scala-maven-plugin.version>3.2.2</scala-maven-plugin.version>
 		<akka.version>2.5.19</akka.version>
 		<json4s.version>3.6.2</json4s.version>
+		<enumeratum.version>1.5.13</enumeratum.version>
 	</properties>
 
 	<dependencyManagement>
@@ -31,6 +32,11 @@
 				<groupId>org.json4s</groupId>
 				<artifactId>json4s-jackson_${scala-floor.version}</artifactId>
 				<version>${json4s.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.beachape</groupId>
+				<artifactId>enumeratum_${scala-floor.version}</artifactId>
+				<version>${enumeratum.version}</version>
 			</dependency>
 			<!-- scala lang -->
 			<dependency>
