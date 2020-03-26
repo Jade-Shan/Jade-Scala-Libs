@@ -4,6 +4,14 @@ Jade-Scala-libs
 Base config for all by Scala project.
 Defing all scala jar dependencies and version.
 
+Scala Syntax Color Settings, copy 
+
+`doc/org.scala-ide.sdt.core.prefs`
+
+to 
+
+`{Eclipse workspace directory}/.metadata/.plugins/org.eclipse.core.runtime/.settings/`
+
 TODO List
 -----------------
 
