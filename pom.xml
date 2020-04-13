@@ -27,6 +27,7 @@
 		<akka.version>2.5.19</akka.version>
 		<json4s.version>3.6.2</json4s.version>
 		<enumeratum.version>1.5.13</enumeratum.version>
+		<!--  -->
 		<jade-javautils.version>1.0.20-SNAPSHOT</jade-javautils.version>
 	</properties>
 
@@ -34,9 +35,39 @@
 		<dependencies>
 			<dependency>
 				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-base</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-cache</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
 				<artifactId>javautils-dao</artifactId>
 				<version>${jade-javautils.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-mongo</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-web</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-sandtable</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jade-dungeon</groupId>
+				<artifactId>javautils-cdn</artifactId>
+				<version>${jade-javautils.version}</version>
+			</dependency>			
 			<!-- 3rd libs -->
 			<dependency>
 				<groupId>org.json4s</groupId>
