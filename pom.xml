@@ -28,7 +28,7 @@
 		<json4s.version>3.6.2</json4s.version>
 		<enumeratum.version>1.5.13</enumeratum.version>
 		<!--  -->
-		<jade-javautils.version>1.0.20-SNAPSHOT</jade-javautils.version>
+		<jade-javautils.version>2.0.0</jade-javautils.version>
 	</properties>
 
 	<dependencyManagement>
